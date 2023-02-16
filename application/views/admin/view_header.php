@@ -24,13 +24,19 @@
 
 
 	<style>
+		.skin-blue .main-header .logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
 		.skin-blue .wrapper,
 		.skin-blue .main-header .logo,
 		.skin-blue .main-header .navbar,
 		.skin-blue .main-sidebar,
 		.content-header .content-header-right a,
 		.content .form-horizontal .btn-success {
-			background-color: #4172a5 !important;
+			background-color: #000066 !important;
 		}
 
 		.content-header .content-header-right a,
@@ -67,6 +73,21 @@
 		.nav-tabs-custom>.nav-tabs>li {
 			border-top-width: 1px !important;
 		}
+
+		/* Custom CSS 17 Februari 2023 */
+
+		li.treeview.active>a {
+			background-color: #ecf0f5 !important;
+			color: #000 !important;
+			margin: 0 0 0 10px !important;
+			border-radius: 30px 0 0 30px;
+		}
+
+		.logo img {
+			width: 20%;
+			height: auto;
+			margin-right: 10px;
+		}
 	</style>
 
 
@@ -80,7 +101,9 @@
 		<header class="main-header">
 
 			<a href="<?php echo base_url(); ?>admin/dashboard" class="logo">
-				<span class="logo-lg"><?php echo $setting['website_name']; ?></span>
+				<img src="<?php echo base_url('/public/uploads/logo.png') ?>" alt="">
+				<span class="logo-lg"> <?php echo $setting['website_name']; ?>
+				</span>
 			</a>
 
 			<nav class="navbar navbar-static-top">
