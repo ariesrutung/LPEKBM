@@ -1,18 +1,3 @@
-<style>
-	.fixed .content-wrapper,
-	.fixed .right-side {
-		margin-top: 50px !important;
-	}
-
-	.content-wrapper,
-	.right-side {
-		min-height: 100%;
-		background-color: #ffffff !important;
-		z-index: 800;
-		border-radius: 30px !important;
-	}
-</style>
-
 <?php
 if (!$this->session->userdata('id')) {
 	redirect(base_url() . 'admin');
