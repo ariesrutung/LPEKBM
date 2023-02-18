@@ -1,3 +1,16 @@
+<style>
+    .blog-one-item {
+        margin-top: 30px;
+        border: 2px solid #e8e8e8;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .blog-one-photo img {
+        border-radius: 15px;
+    }
+</style>
+
 <!--Banner Start-->
 <div class="banner-slider" style="background-image: url(<?php echo base_url(); ?>public/uploads/<?php echo $setting['banner_news']; ?>)">
     <div class="bg"></div>
@@ -13,11 +26,10 @@
 <div class="blog-one-area pt_60 pb_90">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">               
-
+            <div class="col-lg-8">
                 <?php
-                foreach($news_fetched as $row) {
-                    ?>
+                foreach ($news_fetched as $row) {
+                ?>
                     <div class="blog-one-item">
                         <div class="blog-one-photo">
                             <a href="<?php echo base_url(); ?>news/view/<?php echo $row->news_id; ?>"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row->photo; ?>" alt="Blog Photo"></a>
@@ -26,20 +38,44 @@
                             <ul>
                                 <li><i class="fa fa-edit"></i><a href="<?php echo base_url(); ?>category/<?php echo $row->category_id; ?>"><?php echo $row->category_name; ?></a></li>
                                 <li><i class="fa fa-calendar-o"></i>
-                                    <?php 
-                                    $dt = explode('-',$row->news_date);
-                                    if($dt[1] == '01') {$month = 'January';}
-                                    if($dt[1] == '02') {$month = 'February';}
-                                    if($dt[1] == '03') {$month = 'March';}
-                                    if($dt[1] == '04') {$month = 'April';}
-                                    if($dt[1] == '05') {$month = 'May';}
-                                    if($dt[1] == '06') {$month = 'June';}
-                                    if($dt[1] == '07') {$month = 'July';}
-                                    if($dt[1] == '08') {$month = 'August';}
-                                    if($dt[1] == '09') {$month = 'September';}
-                                    if($dt[1] == '10') {$month = 'October';}
-                                    if($dt[1] == '11') {$month = 'November';}
-                                    if($dt[1] == '12') {$month = 'December';}
+                                    <?php
+                                    $dt = explode('-', $row->news_date);
+                                    if ($dt[1] == '01') {
+                                        $month = 'January';
+                                    }
+                                    if ($dt[1] == '02') {
+                                        $month = 'February';
+                                    }
+                                    if ($dt[1] == '03') {
+                                        $month = 'March';
+                                    }
+                                    if ($dt[1] == '04') {
+                                        $month = 'April';
+                                    }
+                                    if ($dt[1] == '05') {
+                                        $month = 'May';
+                                    }
+                                    if ($dt[1] == '06') {
+                                        $month = 'June';
+                                    }
+                                    if ($dt[1] == '07') {
+                                        $month = 'July';
+                                    }
+                                    if ($dt[1] == '08') {
+                                        $month = 'August';
+                                    }
+                                    if ($dt[1] == '09') {
+                                        $month = 'September';
+                                    }
+                                    if ($dt[1] == '10') {
+                                        $month = 'October';
+                                    }
+                                    if ($dt[1] == '11') {
+                                        $month = 'November';
+                                    }
+                                    if ($dt[1] == '12') {
+                                        $month = 'December';
+                                    }
                                     echo $month . ' ' . $dt[2] . ', ' . $dt[0];
                                     ?>
                                 </li>
@@ -53,22 +89,23 @@
                             </div>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
+
                 <div class="row">
                     <div class="col-md-12" style="margin-top:30px;text-align: center;">
                         <?php echo $links; ?>
                     </div>
                 </div>
-                
+
             </div>
 
             <!--Sidebar Start-->
             <div class="col-lg-4">
                 <div class="sidebar">
                     <div class="sidebar-item">
-                        <?php echo form_open(base_url().'search'); ?>
+                        <?php echo form_open(base_url() . 'search'); ?>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="<?php echo SEARCH_FOR; ?>" name="search_string" autocomplete="off">
                             <span class="input-group-btn">
@@ -81,10 +118,10 @@
                         <h3><?php echo SIDEBAR_NEWS_HEADING_1; ?></h3>
                         <ul>
                             <?php
-                            foreach($all_categories as $row) {
-                                ?>
+                            foreach ($all_categories as $row) {
+                            ?>
                                 <li><a href="<?php echo base_url(); ?>category/<?php echo $row['category_id']; ?>"><?php echo $row['category_name']; ?></a></li>
-                                <?php
+                            <?php
                             }
                             ?>
                         </ul>
@@ -92,40 +129,64 @@
                     <div class="sidebar-item">
                         <h3><?php echo SIDEBAR_NEWS_HEADING_2; ?></h3>
                         <?php
-                        $i=0;
-                        foreach($news as $row) {
+                        $i = 0;
+                        foreach ($news as $row) {
                             $i++;
-                            if($i>$setting['sidebar_total_recent_post']) {
+                            if ($i > $setting['sidebar_total_recent_post']) {
                                 break;
                             }
-                            ?>
+                        ?>
                             <div class="sidebar-recent-item">
                                 <div class="recent-photo">
-                                    <a href="<?php echo base_url(); ?>news/view/<?php echo $row['news_id']; ?>"><img src="<?php echo base_url().'public/uploads/'.$row['photo']; ?>" alt="Blog Photo"></a>
+                                    <a href="<?php echo base_url(); ?>news/view/<?php echo $row['news_id']; ?>"><img src="<?php echo base_url() . 'public/uploads/' . $row['photo']; ?>" alt="Blog Photo"></a>
                                 </div>
                                 <div class="recent-text">
                                     <a href="<?php echo base_url(); ?>news/view/<?php echo $row['news_id']; ?>"><?php echo $row['news_title']; ?></a>
                                     <div class="rpwwt-post-date">
-                                        <?php 
-                                        $dt = explode('-',$row['news_date']);
-                                        if($dt[1] == '01') {$month = 'January';}
-                                        if($dt[1] == '02') {$month = 'February';}
-                                        if($dt[1] == '03') {$month = 'March';}
-                                        if($dt[1] == '04') {$month = 'April';}
-                                        if($dt[1] == '05') {$month = 'May';}
-                                        if($dt[1] == '06') {$month = 'June';}
-                                        if($dt[1] == '07') {$month = 'July';}
-                                        if($dt[1] == '08') {$month = 'August';}
-                                        if($dt[1] == '09') {$month = 'September';}
-                                        if($dt[1] == '10') {$month = 'October';}
-                                        if($dt[1] == '11') {$month = 'November';}
-                                        if($dt[1] == '12') {$month = 'December';}
+                                        <?php
+                                        $dt = explode('-', $row['news_date']);
+                                        if ($dt[1] == '01') {
+                                            $month = 'January';
+                                        }
+                                        if ($dt[1] == '02') {
+                                            $month = 'February';
+                                        }
+                                        if ($dt[1] == '03') {
+                                            $month = 'March';
+                                        }
+                                        if ($dt[1] == '04') {
+                                            $month = 'April';
+                                        }
+                                        if ($dt[1] == '05') {
+                                            $month = 'May';
+                                        }
+                                        if ($dt[1] == '06') {
+                                            $month = 'June';
+                                        }
+                                        if ($dt[1] == '07') {
+                                            $month = 'July';
+                                        }
+                                        if ($dt[1] == '08') {
+                                            $month = 'August';
+                                        }
+                                        if ($dt[1] == '09') {
+                                            $month = 'September';
+                                        }
+                                        if ($dt[1] == '10') {
+                                            $month = 'October';
+                                        }
+                                        if ($dt[1] == '11') {
+                                            $month = 'November';
+                                        }
+                                        if ($dt[1] == '12') {
+                                            $month = 'December';
+                                        }
                                         echo $month . ' ' . $dt[2] . ', ' . $dt[0];
                                         ?>
                                     </div>
                                 </div>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
                     </div>

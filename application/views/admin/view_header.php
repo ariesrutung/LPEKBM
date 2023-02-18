@@ -210,11 +210,11 @@
 						</a>
 						<ul class="treeview-menu">
 							<li><a href="<?php echo base_url(); ?>admin/page-home"><i class="fa fa-circle-o"></i>Beranda</a></li>
+							<li><a href="<?php echo base_url(); ?>admin/page-news"><i class="fa fa-circle-o"></i>Berita</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/page-about"><i class="fa fa-circle-o"></i>Tentang LPEKBM</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/page-faq"><i class="fa fa-circle-o"></i>FAQ</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/page-service"><i class="fa fa-circle-o"></i>Layanan</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/page-testimonial"><i class="fa fa-circle-o"></i>Testimoni</a></li>
-							<li><a href="<?php echo base_url(); ?>admin/page-news"><i class="fa fa-circle-o"></i>Berita</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/page-event"><i class="fa fa-circle-o"></i>Kegiatan</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/page-contact"><i class="fa fa-circle-o"></i>Kontak</a></li>
 							<li><a href="<?php echo base_url(); ?>admin/page-search"><i class="fa fa-circle-o"></i>Pencarian</a></li>

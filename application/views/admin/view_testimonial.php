@@ -1,15 +1,15 @@
 <?php
-if(!$this->session->userdata('id')) {
-    redirect(base_url().'admin');
+if (!$this->session->userdata('id')) {
+	redirect(base_url() . 'admin');
 }
 ?>
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Testimonials</h1>
+		<h1>Halaman Testimoni</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="<?php echo base_url(); ?>admin/testimonial/add" class="btn btn-primary btn-sm">Add Testimonial</a>
+		<a href="<?php echo base_url(); ?>admin/testimonial/add" class="btn btn-primary btn-sm">Tambah Testimoni</a>
 	</div>
 </section>
 
@@ -18,43 +18,43 @@ if(!$this->session->userdata('id')) {
 		<div class="col-md-12">
 
 			<?php
-	        if($this->session->flashdata('error')) {
-	            ?>
+			if ($this->session->flashdata('error')) {
+			?>
 				<div class="callout callout-danger">
 					<p><?php echo $this->session->flashdata('error'); ?></p>
 				</div>
-	            <?php
-	        }
-	        if($this->session->flashdata('success')) {
-	            ?>
+			<?php
+			}
+			if ($this->session->flashdata('success')) {
+			?>
 				<div class="callout callout-success">
 					<p><?php echo $this->session->flashdata('success'); ?></p>
 				</div>
-	            <?php
-	        }
-	        ?>
+			<?php
+			}
+			?>
 
-	        
+
 			<div class="box box-info">
 				<div class="box-body table-responsive">
 					<table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th width="30">SL</th>
-								<th>Photo</th>
-								<th width="100">Name</th>
-								<th width="100">Designation</th>
-								<th>Comment</th>
-								<th>Language</th>
-								<th width="80">Action</th>
+								<th width="30">No.</th>
+								<th>Gambar</th>
+								<th width="100">Nama</th>
+								<th width="100">Jabatan</th>
+								<th>Komentar</th>
+								<th>Bahasa</th>
+								<th width="80">Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
 							<?php
-							$i=0;							
+							$i = 0;
 							foreach ($testimonial as $row) {
 								$i++;
-								?>
+							?>
 								<tr>
 									<td><?php echo $i; ?></td>
 									<td style="width:130px;"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>" style="width:120px;"></td>
@@ -62,14 +62,14 @@ if(!$this->session->userdata('id')) {
 									<td><?php echo $row['designation']; ?></td>
 									<td><?php echo $row['comment']; ?></td>
 									<td><?php echo $row['lang_name']; ?></td>
-									<td>										
-										<a href="<?php echo base_url(); ?>admin/testimonial/edit/<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="<?php echo base_url(); ?>admin/testimonial/delete/<?php echo $row['id']; ?>" class="btn btn-danger btn-xs" onClick="return confirm('Are you sure?');">Delete</a>
+									<td>
+										<a href="<?php echo base_url(); ?>admin/testimonial/edit/<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Ubah</a>
+										<a href="<?php echo base_url(); ?>admin/testimonial/delete/<?php echo $row['id']; ?>" class="btn btn-danger btn-xs" onClick="return confirm('Are you sure?');">Hapus</a>
 									</td>
 								</tr>
-								<?php
+							<?php
 							}
-							?>							
+							?>
 						</tbody>
 					</table>
 				</div>

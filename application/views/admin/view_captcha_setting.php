@@ -6,7 +6,7 @@ if (!$this->session->userdata('id')) {
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Captcha</h1>
+		<h1>Pengaturan Captcha</h1>
 	</div>
 </section>
 
@@ -34,41 +34,41 @@ if (!$this->session->userdata('id')) {
 			<div class="box box-info">
 				<div class="box-body">
 					<div class="form-group">
-						<label for="" class="col-sm-3 control-label">Captcha - Contact Page </label>
+						<label for="" class="col-sm-3 control-label">Captcha - Halaman Kontak </label>
 						<div class="col-sm-2">
 							<select name="captcha_contact" class="form-control select2">
 								<option value="Show" <?php if ($captcha['captcha_contact'] == 'Show') {
 															echo 'selected';
-														} ?>>Show</option>
+														} ?>>Tampilkan</option>
 								<option value="Hide" <?php if ($captcha['captcha_contact'] == 'Hide') {
 															echo 'selected';
-														} ?>>Hide</option>
+														} ?>>Sembunyikan</option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="" class="col-sm-3 control-label">Captcha - Service Detail Page </label>
+						<label for="" class="col-sm-3 control-label">Captcha - Detail Halaman Layanan </label>
 						<div class="col-sm-2">
 							<select name="captcha_service_detail" class="form-control select2">
 								<option value="Show" <?php if ($captcha['captcha_service_detail'] == 'Show') {
 															echo 'selected';
-														} ?>>Show</option>
+														} ?>>Tampilkan</option>
 								<option value="Hide" <?php if ($captcha['captcha_service_detail'] == 'Hide') {
 															echo 'selected';
-														} ?>>Hide</option>
+														} ?>>Sembunyikan</option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="" class="col-sm-3 control-label">Captcha - Portfolio Detail Page </label>
+						<label for="" class="col-sm-3 control-label">Captcha - Detail Halaman Portofolio </label>
 						<div class="col-sm-2">
 							<select name="captcha_portfolio_detail" class="form-control select2">
 								<option value="Show" <?php if ($captcha['captcha_portfolio_detail'] == 'Show') {
 															echo 'selected';
-														} ?>>Show</option>
+														} ?>>Tampilkan</option>
 								<option value="Hide" <?php if ($captcha['captcha_portfolio_detail'] == 'Hide') {
 															echo 'selected';
-														} ?>>Hide</option>
+														} ?>>Sembunyikan</option>
 							</select>
 						</div>
 					</div>
