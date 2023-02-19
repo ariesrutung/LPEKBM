@@ -71,13 +71,13 @@ if (!$this->session->userdata('id')) {
                         <div class="box box-info">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="" class="col-sm-2 control-label">Logo Sekarang</label>
+                                    <label for="" class="col-sm-2 control-label">Logo</label>
                                     <div class="col-sm-6" style="padding-top:6px;">
                                         <img src="<?php echo base_url(); ?>public/uploads/<?php echo $setting['logo']; ?>" class="existing-photo" style="height:80px;">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="" class="col-sm-2 control-label">Logo Baru</label>
+                                    <label for="" class="col-sm-2 control-label">Unggah Baru</label>
                                     <div class="col-sm-6" style="padding-top:6px;">
                                         <input type="file" name="photo_logo">
                                     </div>
@@ -108,13 +108,13 @@ if (!$this->session->userdata('id')) {
                         <div class="box box-info">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="" class="col-sm-2 control-label">Favicon Sekarang</label>
+                                    <label for="" class="col-sm-2 control-label">Favicon</label>
                                     <div class="col-sm-6" style="padding-top:6px;">
                                         <img src="<?php echo base_url(); ?>public/uploads/<?php echo $setting['favicon']; ?>" class="existing-photo" style="height:40px;">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="" class="col-sm-2 control-label">Favicon Baru</label>
+                                    <label for="" class="col-sm-2 control-label">Unggah Baru</label>
                                     <div class="col-sm-6" style="padding-top:6px;">
                                         <input type="file" name="photo_favicon">
                                     </div>

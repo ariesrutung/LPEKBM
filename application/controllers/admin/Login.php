@@ -1,10 +1,10 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller 
+class Login extends CI_Controller
 {
 
-    function __construct() 
+    function __construct()
     {
         parent::__construct();
         $this->load->model('admin/Model_login');
@@ -17,36 +17,33 @@ class Login extends CI_Controller
         $data['setting'] = $this->Model_login->get_setting_data();
 
         $logged_in = $this->session->userdata('logged_in');
-        if($logged_in)
-        {
-            redirect(base_url().'admin/dashboard');
+        if ($logged_in) {
+            redirect(base_url() . 'admin/dashboard');
         }
 
-        if(isset($_POST['form1'])) {
+        if (isset($_POST['form1'])) {
 
             // Getting the form data
-            $email = $this->input->post('email',true);
-            $password = $this->input->post('password',true);
+            $email = $this->input->post('email', true);
+            $password = $this->input->post('password', true);
 
             // Checking the email address
             $un = $this->Model_login->check_email($email);
 
-            if(!$un) {
-                $error = 'Email address is wrong!';
-                $this->session->set_flashdata('error',$error);
-                redirect(base_url().'admin');
-
+            if (!$un) {
+                $error = 'Email Anda salah, masukkan ulang!';
+                $this->session->set_flashdata('error', $error);
+                redirect(base_url() . 'admin');
             } else {
 
                 // When email found, checking the password
-                $pw = $this->Model_login->check_password($email,$password);
+                $pw = $this->Model_login->check_password($email, $password);
 
-                if(!$pw) {
-                    
-                    $error = 'Password is wrong!';
-                    $this->session->set_flashdata('error',$error);
-                    redirect(base_url().'admin');
+                if (!$pw) {
 
+                    $error = 'Kata sandi Anda salah, masukkan ulang!';
+                    $this->session->set_flashdata('error', $error);
+                    redirect(base_url() . 'admin');
                 } else {
 
                     // When email and password both are correct
@@ -60,17 +57,17 @@ class Login extends CI_Controller
                         'logged_in' => true
                     );
                     $this->session->set_userdata($array);
-                    redirect(base_url().'admin/dashboard');
+                    redirect(base_url() . 'admin/dashboard');
                 }
             }
         } else {
-            $this->load->view('admin/view_login',$data);    
+            $this->load->view('admin/view_adminlogin2', $data);
         }
-        
     }
 
-    function logout() {
+    function logout()
+    {
         $this->session->sess_destroy();
-        redirect(base_url().'admin');
+        redirect(base_url() . 'admin');
     }
 }
