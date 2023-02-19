@@ -77,7 +77,7 @@
 		/* Custom CSS 17 Februari 2023 */
 
 		li.treeview.active>a {
-			background-color: #ecf0f5 !important;
+			background-color: #fff !important;
 			color: #000 !important;
 			margin: 2px 0 2px 10px !important;
 			border-radius: 30px 0 0 30px;

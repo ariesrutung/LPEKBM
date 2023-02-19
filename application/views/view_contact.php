@@ -1,3 +1,10 @@
+<style>
+    .map-area.pb_90 .container {
+        margin-bottom: 20px !important;
+        padding: 0 !important;
+        border: 2px solid #ced4da;
+    }
+</style>
 <!--Banner Start-->
 <div class="banner-slider" style="background-image: url(<?php echo base_url(); ?>public/uploads/<?php echo $setting['banner_contact']; ?>)">
     <div class="bg"></div>
