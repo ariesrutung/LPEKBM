@@ -1,14 +1,14 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller 
+class Dashboard extends CI_Controller
 {
-	function __construct() 
+	function __construct()
 	{
-        parent::__construct();
-        $this->load->model('admin/Model_common');
-        $this->load->model('admin/Model_dashboard');
-    }
+		parent::__construct();
+		$this->load->model('admin/Model_common');
+		$this->load->model('admin/Model_dashboard');
+	}
 	public function index()
 	{
 		$data['setting'] = $this->Model_common->get_setting_data();
@@ -22,11 +22,11 @@ class Dashboard extends CI_Controller
 		$data['total_event'] = $this->Model_dashboard->show_total_event();
 		$data['total_photo'] = $this->Model_dashboard->show_total_photo();
 		$data['total_pricing_table'] = $this->Model_dashboard->show_total_pricing_table();
-		
-		
 
-		$this->load->view('admin/view_header',$data);
-		$this->load->view('admin/view_dashboard',$data);
+
+
+		$this->load->view('admin/view_header', $data);
+		$this->load->view('admin/view_dashboard', $data);
 		$this->load->view('admin/view_footer');
 	}
 }

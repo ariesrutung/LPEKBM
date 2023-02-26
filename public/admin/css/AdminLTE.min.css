@@ -129,8 +129,10 @@ body {
 }
 
 body.fixed.skin-blue.sidebar-mini .content-wrapper {
-    margin-top: 50px !important;
+    margin-top: 6vh !important;
     border-radius: 30px 30px 0 30px;
+    min-height: 91vh !important;
+    margin-bottom: 3vh !important;
 }
 
 @media (max-width:767px) {
@@ -572,13 +574,13 @@ a:focus {
 
 .sidebar-menu>li {
     position: relative;
-    margin: 0;
-    padding: 0
+    margin: 10px 0 0 10px;
+    padding: 0;
 }
 
 .sidebar-menu>li>a {
     padding: 12px 5px 12px 15px;
-    display: block
+    display: block;
 }
 
 .sidebar-menu>li>a>.fa,
@@ -637,7 +639,7 @@ a:focus {
 }
 
 .sidebar-menu .treeview-menu>li>a {
-    padding: 5px 5px 5px 15px;
+    padding: 15px 0 10px 25px !important;
     display: block;
     font-size: 14px
 }

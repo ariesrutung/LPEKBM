@@ -55,7 +55,7 @@ if (!$this->session->userdata('id')) {
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#tab_logo" data-toggle="tab">Logo</a></li>
                     <li><a href="#tab_favicon" data-toggle="tab">Favicon</a></li>
-                    <li><a href="#tab_top_bar" data-toggle="tab">Top Bar</a></li>
+                    <li><a href="#tab_top_bar" data-toggle="tab">Topbar</a></li>
                     <li><a href="#tab_email" data-toggle="tab">Email</a></li>
                     <li><a href="#tab_banner" data-toggle="tab">Banner</a></li>
                     <li><a href="#tab_sidebar" data-toggle="tab">Sidebar</a></li>
@@ -524,7 +524,7 @@ if (!$this->session->userdata('id')) {
                         <?php echo form_open(base_url() . 'admin/setting/update', array('class' => 'form-horizontal')); ?>
                         <div class="box box-info">
                             <div class="box-body">
-                                <h3 class="sec_title" style="margin-top:0;">Halaman Berita - Sidebar</h3>
+                                <h3 class="sec_title" style="margin-top:0;">Sidebar Halaman Berita</h3>
                                 <div class="form-group">
                                     <label for="" class="col-sm-3 control-label">Berita Terbaru *</label>
                                     <div class="col-sm-4">
@@ -532,7 +532,7 @@ if (!$this->session->userdata('id')) {
                                     </div>
                                 </div>
 
-                                <h3 class="sec_title">Halaman Kegiatan - Sidebar</h3>
+                                <h3 class="sec_title">Sidebar Halaman Kegiatan</h3>
                                 <div class="form-group">
                                     <label for="" class="col-sm-3 control-label">Kegiatan Mendatang *</label>
                                     <div class="col-sm-4">

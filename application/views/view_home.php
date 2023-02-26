@@ -16,7 +16,7 @@
     .choose-area.pb_90 .testimonial-carousel .owl-dots .owl-dot {
         width: 20px !important;
         height: 25px !important;
-        background-color: #000066 !important;
+        background-color: #1e40af !important;
         border-radius: 30px !important;
         min-width: 35px !important;
     }
@@ -24,7 +24,7 @@
     .choose-area.pb_90 .testimonial-carousel .owl-dots .owl-dot.active {
         width: 20px !important;
         height: 25px !important;
-        background-color: #000066 !important;
+        background-color: #1e40af !important;
         border-radius: 30px !important;
         min-width: 50px !important;
     }
@@ -41,6 +41,19 @@
         width: 100%;
         border-radius: 10px;
         /* height: 450px; */
+    }
+
+    .feature-area.feature-two.bg-area.pt_90.pb_90 .row .col-12 *,
+    .price-area.bg-area.pt_90.pb_90 .row .col-12 * {
+        color: #fff;
+    }
+
+    .feature-area.feature-two.bg-area,
+    .bg-booking,
+    .bg-counterup,
+    .price-area.bg-area.pt_90.pb_90,
+    .call-us:before {
+        background-color: #23445e !important;
     }
 </style>
 <!--Slider Start-->

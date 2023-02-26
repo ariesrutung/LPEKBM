@@ -296,7 +296,7 @@ img.existing-photo {
 
 .skin-blue .sidebar-menu>li:hover>a,
 .skin-blue .sidebar-menu>li.active>a {
-    background-color: #4c4c4c;
+    background-color: #2849b2;
     border-left-color: #000000;
 }
 
@@ -357,7 +357,7 @@ img.existing-photo {
 }
 
 .sidebar-menu .treeview-menu>li>a {
-    padding: 8px 5px 8px 15px;
+    padding: 15px 0 10px 25px !important;
 }
 
 .select2-container {
@@ -412,25 +412,6 @@ textarea+.panel:focus {
 .tab-v .nav-tabs>li {
     float: none!important;
 }
-
-
-/*.tab-v {
-	width: 100%;
-}
-
-.tab-v .nav-tabs>li {
-	float: none!important;
-}
-
-.tab-v .nav-tabs {
-	width: 200px!important;
-	float: left;
-}
-
-.tab-v .tab-content {
-	width: calc(100% - 200px)!important;
-	float: left;
-}*/
 
 .tab-v .nav-tabs>li.active>a,
 .tab-v .nav-tabs>li.active>a:focus,

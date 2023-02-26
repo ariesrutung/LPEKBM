@@ -26,8 +26,8 @@
 	<style>
 		.skin-blue .main-header .logo {
 			display: flex;
-			justify-content: center;
 			align-items: center;
+			padding-left: 20px;
 		}
 
 		.skin-blue .wrapper,
@@ -36,7 +36,7 @@
 		.skin-blue .main-sidebar,
 		.content-header .content-header-right a,
 		.content .form-horizontal .btn-success {
-			background-color: #000066 !important;
+			background-color: #1e40af !important;
 		}
 
 		.content-header .content-header-right a,
@@ -87,10 +87,14 @@
 			width: 20%;
 			height: auto;
 			margin-right: 10px;
+			border: 2px solid #fff !important;
+			border-radius: 100%;
 		}
 
-		ul.treeview-menu.menu-open li {
-			padding-left: 15px;
+		ul.treeview-menu.menu-open li a:hover {
+			background-color: #2849b2;
+			border-radius: 30px 0 0 30px;
+			/* padding: 12px !important; */
 		}
 	</style>
 
@@ -120,9 +124,10 @@
 
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
-						<li>
-							<a href="<?php echo base_url(); ?>" target="_blank">Kunjungi Web</a>
-						</li>
+						<!-- <li>
+							<a href="<?php // echo base_url(); 
+										?>" target="_blank">Kunjungi Web</a>
+						</li> -->
 
 						<li class="dropdown user user-menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -241,15 +246,7 @@
 					</ul>
 				</li>
 
-				<li class="treeview <?php if (($class_name == 'page_dynamic')) {
-										echo 'active';
-									} ?>">
-					<a href="<?php echo base_url(); ?>admin/page-dynamic">
-						<i class="fa fa-cog"></i> <span>Halaman Dinamis</span>
-					</a>
-				</li>
-
-				<li class="treeview <?php if (($class_name == 'file') || ($class_name == 'faq') || ($class_name == 'why_choose') || ($class_name == 'feature') || ($class_name == 'service') || ($class_name == 'client') || ($class_name == 'portfolio') || ($class_name == 'portfolio_category') || ($class_name == 'pricing_table') || ($class_name == 'photo') || ($class_name == 'testimonial') || ($class_name == 'team_member') || ($class_name == 'subscriber') || ($class_name == 'event') || ($class_name == 'slider') || ($class_name == 'category') || ($class_name == 'comment') || ($class_name == 'news') || ($class_name == 'captcha_setting') || ($class_name == 'lang') || ($class_name == 'menu') || ($class_name == 'social_media')) {
+				<li class="treeview <?php if (($class_name == 'page_dynamic') || ($class_name == 'file') || ($class_name == 'faq') || ($class_name == 'why_choose') || ($class_name == 'feature') || ($class_name == 'service') || ($class_name == 'client') || ($class_name == 'portfolio') || ($class_name == 'portfolio_category') || ($class_name == 'pricing_table') || ($class_name == 'photo') || ($class_name == 'testimonial') || ($class_name == 'team_member') || ($class_name == 'subscriber') || ($class_name == 'event') || ($class_name == 'slider') || ($class_name == 'category') || ($class_name == 'comment') || ($class_name == 'news') || ($class_name == 'captcha_setting') || ($class_name == 'lang') || ($class_name == 'menu') || ($class_name == 'social_media')) {
 										echo 'active';
 									} ?>">
 					<a href="#">
@@ -266,19 +263,20 @@
 											} ?>">
 							<a href="#">
 								<i class="fa fa-newspaper-o"></i>
-								<span>News</span>
+								<span>Berita</span>
 								<span class="pull-right-container">
 									<i class="fa fa-angle-left pull-right"></i>
 								</span>
 							</a>
 							<ul class="treeview-menu">
-								<li><a href="<?php echo base_url(); ?>admin/category"><i class="fa fa-circle-o"></i>Kategori</a></li>
 								<li><a href="<?php echo base_url(); ?>admin/news"><i class="fa fa-circle-o"></i>Berita</a></li>
-								<li><a href="<?php echo base_url(); ?>admin/comment"><i class="fa fa-circle-o"></i>Komentar</a></li>
+								<li><a href="<?php echo base_url(); ?>admin/category"><i class="fa fa-circle-o"></i>Kategori</a></li>
+								<!-- <li><a href="<?php // echo base_url(); 
+													?>admin/comment"><i class="fa fa-circle-o"></i>Komentar</a></li> -->
 							</ul>
 						</li>
 				</li>
-				<li><a href="<?php echo base_url(); ?>admin/event"><i class="fa fa-circle-o"></i>Event</a></li>
+				<li><a href="<?php echo base_url(); ?>admin/event"><i class="fa fa-circle-o"></i>Kegiatan</a></li>
 				<li><a href="<?php echo base_url(); ?>admin/testimonial"><i class="fa fa-circle-o"></i>Testimoni</a></li>
 				<li class="treeview <?php if (($class_name == 'subscriber')) {
 										echo 'active';
@@ -321,6 +319,14 @@
 				<li><a href="<?php echo base_url(); ?>admin/client"><i class="fa fa-circle-o"></i>Klien </a></li>
 				<li><a href="<?php echo base_url(); ?>admin/service"><i class="fa fa-circle-o"></i>Layanan </a></li>
 				<li><a href="<?php echo base_url(); ?>admin/service"><i class="fa fa-circle-o"></i>Fitur </a></li>
+				<li class="treeview <?php if (($class_name == 'page_dynamic')) {
+										echo 'active';
+									} ?>">
+					<a href="<?php echo base_url(); ?>admin/page-dynamic">
+						<i class="fa fa-cog"></i> <span>Halaman Dinamis</span>
+					</a>
+				</li>
+
 				</ul>
 				</li>
 
