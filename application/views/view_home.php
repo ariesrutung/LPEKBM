@@ -55,6 +55,34 @@
     .call-us:before {
         background-color: #23445e !important;
     }
+
+    .row.header-area.left {
+        margin: -57px 40% 0 0;
+        -webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 95%, 0% 100%);
+        clip-path: polygon(0% 0%, 95% 0%, 100% 95%, 0% 100%);
+        z-index: 999;
+        position: relative;
+        height: 60px;
+        /* background-color: #ba9f69 !important; */
+    }
+
+    .row.header-area.right {
+        margin: -59px 0 0 40%;
+        -webkit-clip-path: polygon(5% 0, 100% 0, 100% 99%, 0% 100%);
+        clip-path: polygon(5% 0, 100% 0, 100% 99%, 0% 100%);
+        z-index: 999;
+        position: relative;
+        height: 60px;
+        /* background-color: #ba9f69 !important; */
+    }
+
+    @media only screen and (max-width: 770px) {
+
+        .row.header-area.left,
+        .row.header-area.right {
+            display: none;
+        }
+    }
 </style>
 <!--Slider Start-->
 <div class="slider">
@@ -114,6 +142,14 @@
 </div>
 <!--Slider End-->
 
+<div class="row">
+    <div class="col-md-6">
+        <div class="row header-area left"></div>
+    </div>
+    <div class="col-md-6">
+        <div class="row header-area right"></div>
+    </div>
+</div>
 <!--About Start-->
 <?php if ($page_home_lang_independent['home_welcome_status'] == 'Show') : ?>
     <div class="about-area pt_60 pb_90">

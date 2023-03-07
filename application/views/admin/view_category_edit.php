@@ -1,6 +1,6 @@
 <?php
-if(!$this->session->userdata('id')) {
-	redirect(base_url().'admin');
+if (!$this->session->userdata('id')) {
+	redirect(base_url() . 'admin');
 }
 ?>
 
@@ -15,38 +15,38 @@ if(!$this->session->userdata('id')) {
 
 <section class="content">
 
-  	<div class="row">
-	    <div class="col-md-12">
+	<div class="row">
+		<div class="col-md-12">
 
 			<?php
-			if($this->session->flashdata('error')) {
-				?>
+			if ($this->session->flashdata('error')) {
+			?>
 				<div class="callout callout-danger">
 					<p><?php echo $this->session->flashdata('error'); ?></p>
 				</div>
-				<?php
+			<?php
 			}
-			if($this->session->flashdata('success')) {
-				?>
+			if ($this->session->flashdata('success')) {
+			?>
 				<div class="callout callout-success">
 					<p><?php echo $this->session->flashdata('success'); ?></p>
 				</div>
-				<?php
+			<?php
 			}
 			?>
 
-	        <?php echo form_open_multipart(base_url().'admin/category/edit/'.$category['category_id'],array('class' => 'form-horizontal')); ?>
+			<?php echo form_open_multipart(base_url() . 'admin/category/edit/' . $category['category_id'], array('class' => 'form-horizontal')); ?>
 
-	        <div class="box box-info">
+			<div class="box box-info">
 
-	            <div class="box-body">
-	                <div class="form-group">
-	                    <label for="" class="col-sm-2 control-label">Category Name <span>*</span></label>
-	                    <div class="col-sm-4">
-	                        <input type="text" class="form-control" name="category_name" value="<?php echo $category['category_name']; ?>">
-	                    </div>
-	                </div>
-	                <div class="form-group">
+				<div class="box-body">
+					<div class="form-group">
+						<label for="" class="col-sm-2 control-label">Category Name <span>*</span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" name="category_name" value="<?php echo $category['category_name']; ?>">
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="" class="col-sm-2 control-label">Existing Banner</label>
 						<div class="col-sm-9" style="padding-top:5px">
 							<img src="<?php echo base_url(); ?>public/uploads/<?php echo $category['category_banner']; ?>" alt="Slider Photo" style="width:180px;">
@@ -55,10 +55,10 @@ if(!$this->session->userdata('id')) {
 					<div class="form-group">
 						<label for="" class="col-sm-2 control-label">Banner </label>
 						<div class="col-sm-6" style="padding-top:5px">
-							<input type="file" name="banner">(Only jpg, jpeg, gif and png are allowed)
+							<input type="file" name="banner">(Hanya .jpg, .gif, dan .png yang diperbolehkan.)
 						</div>
 					</div>
-	                <div class="form-group">
+					<div class="form-group">
 						<label for="" class="col-sm-2 control-label">Meta Title </label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" name="meta_title" value="<?php echo $category['meta_title']; ?>">
@@ -77,32 +77,33 @@ if(!$this->session->userdata('id')) {
 						</div>
 					</div>
 					<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Language </label>
-							<div class="col-sm-2">
-								<select name="lang_id" class="form-control select2">
-									<?php
-									foreach($all_lang as $row)
-									{
-										?><option value="<?php echo $row['lang_id']; ?>" <?php if($category['lang_id'] == $row['lang_id']) {echo 'selected';} ?>><?php echo $row['lang_name']; ?></option><?php
-									}
-									?>
-								</select>
-							</div>
+						<label for="" class="col-sm-2 control-label">Language </label>
+						<div class="col-sm-2">
+							<select name="lang_id" class="form-control select2">
+								<?php
+								foreach ($all_lang as $row) {
+								?><option value="<?php echo $row['lang_id']; ?>" <?php if ($category['lang_id'] == $row['lang_id']) {
+																								echo 'selected';
+																							} ?>><?php echo $row['lang_name']; ?></option><?php
+																																																		}
+																																																			?>
+							</select>
 						</div>
-	                <div class="form-group">
-	                	<label for="" class="col-sm-2 control-label"></label>
-	                    <div class="col-sm-6">
-	                      <button type="submit" class="btn btn-success pull-left" name="form1">Update</button>
-	                    </div>
-	                </div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-2 control-label"></label>
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-success pull-left" name="form1">Update</button>
+						</div>
+					</div>
 
-	            </div>
+				</div>
 
-	        </div>
+			</div>
 
-	        <?php echo form_close(); ?>
+			<?php echo form_close(); ?>
 
-	    </div>
-  	</div>
+		</div>
+	</div>
 
 </section>
