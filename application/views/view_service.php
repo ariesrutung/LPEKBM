@@ -27,12 +27,12 @@
                                 <?php echo nl2br($row['short_description']); ?>
                             </p>
                             <div class="button-bn">
-                                <a href="<?php echo base_url(); ?>service/view/<?php echo $row['id']; ?>"><?php echo READ_MORE; ?> <i class="fa fa-chevron-circle-right"></i></a>
+                                <a href="<?php echo base_url(); ?>service/view/<?php echo $row['id']; ?>"><?php echo READ_MORE; ?> <i class="bi bi-chevron-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
             ?>
         </div>

@@ -83,22 +83,26 @@
             display: none;
         }
     }
+
+    * {
+        font-family: Nunito, "open sans", "segoe ui", "open sans", arial;
+    }
 </style>
 <!--Slider Start-->
 <div class="slider">
     <div class="slide-carousel slider-one owl-carousel">
         <?php
         foreach ($sliders as $slider) {
-        ?>
+            ?>
             <div class="slider-item flex" style="background-image:url(<?php echo base_url(); ?>public/uploads/<?php echo $slider['photo']; ?>);">
                 <div class="bg-slider"></div>
                 <div class="container">
                     <div class="row">
                         <div class="<?php if ($slider['position'] == 'Left') {
-                                        echo 'col-lg-6 col-md-9 col-12';
-                                    } else {
-                                        echo 'offset-lg-6 col-lg-6 offset-md-3 col-md-9 col-12';
-                                    } ?>">
+                                            echo 'col-lg-6 col-md-9 col-12';
+                                        } else {
+                                            echo 'offset-lg-6 col-lg-6 offset-md-3 col-md-9 col-12';
+                                        } ?>">
                             <div class="slider-text">
 
                                 <?php if ($slider['heading'] != '') : ?>
@@ -233,8 +237,8 @@
                         <source src="https://jatengprov.go.id/wp-content/uploads/2020/05/b2ok.mp4" type="video/mp4">
                     </video>
                     <!-- <div class="about-tab" style="background-image: url(<?php // echo base_url(); 
-                                                                                ?>public/uploads/<?php // echo $page_home_lang_independent['home_welcome_video_bg']; 
-                                                                                                    ?>)">
+                                                                                    ?>public/uploads/<?php // echo $page_home_lang_independent['home_welcome_video_bg']; 
+                                                                                                        ?>)">
                         <div class="video-section">
                             <a class="video-button" href="#" data-toggle="modal" data-target="#myModal"><span></span></a>
                         </div>
@@ -292,8 +296,8 @@
 
             <div class="row items testimonial-carousel owl-carousel">
                 <?php
-                foreach ($why_choose as $row) {
-                ?>
+                    foreach ($why_choose as $row) {
+                        ?>
                     <div class="col-lg-12">
                         <div class="choose-item flex" style="background-image: url(<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>)">
                             <div class="choose-icon">
@@ -308,8 +312,8 @@
                         </div>
                     </div>
                 <?php
-                }
-                ?>
+                    }
+                    ?>
             </div>
         </div>
     </div>
@@ -331,8 +335,8 @@
             </div>
             <div class="row">
                 <?php
-                foreach ($features as $row) {
-                ?>
+                    foreach ($features as $row) {
+                        ?>
                     <div class="col-lg-4 col-md-6">
                         <div class="feature-item">
                             <div class="feature-icon">
@@ -347,8 +351,8 @@
                         </div>
                     </div>
                 <?php
-                }
-                ?>
+                    }
+                    ?>
             </div>
         </div>
     </div>
@@ -371,8 +375,8 @@
             <div class="row">
 
                 <?php
-                foreach ($services as $row) {
-                ?>
+                    foreach ($services as $row) {
+                        ?>
                     <div class="col-lg-4 col-md-6">
                         <div class="services-item effect-item">
                             <a href="<?php echo base_url(); ?>service/view/<?php echo $row['id']; ?>" class="image-effect">
@@ -384,14 +388,14 @@
                                     <?php echo nl2br($row['short_description']); ?>
                                 </p>
                                 <div class="button-bn">
-                                    <a href="<?php echo base_url(); ?>service/view/<?php echo $row['id']; ?>"><?php echo READ_MORE; ?> <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="<?php echo base_url(); ?>service/view/<?php echo $row['id']; ?>"><?php echo READ_MORE; ?> <i class="bi bi-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php
-                }
-                ?>
+                    }
+                    ?>
             </div>
         </div>
     </div>
@@ -458,27 +462,27 @@
                         <ul id="filtrnav">
                             <li class="filtr filtr-active" data-filter="all"><?php echo ALL; ?></li>
                             <?php
-                            foreach ($portfolio_category as $row) {
-                            ?>
+                                foreach ($portfolio_category as $row) {
+                                    ?>
                                 <li class="filtr" data-filter="<?php echo $row['category_id']; ?>"><?php echo $row['category_name']; ?></li>
                             <?php
-                            }
-                            ?>
+                                }
+                                ?>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row filtr-container">
                 <?php
-                foreach ($portfolio as $row) {
-                ?>
+                    foreach ($portfolio as $row) {
+                        ?>
                     <div class="col-lg-4 col-md-6 filtr-item" data-category="<?php echo $row['category_id']; ?>" data-sort="Menu">
                         <div class="portfolio-group">
                             <div class="portfolio-photo" style="background-image: url(<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>)">
                                 <div class="portfolio-bg"></div>
                                 <div class="portfolio-table">
                                     <div class="portfolio-icon">
-                                        <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                        <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="magnific"><i class="bi bi-search-plus"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -488,8 +492,8 @@
                         </div>
                     </div>
                 <?php
-                }
-                ?>
+                    }
+                    ?>
             </div>
         </div>
     </div>
@@ -547,15 +551,15 @@
                         <div class="faq-group pt-30">
                             <div id="accordion">
                                 <?php
-                                $i = 0;
-                                foreach ($home_faq as $row) {
-                                    $i++;
-                                ?>
+                                    $i = 0;
+                                    foreach ($home_faq as $row) {
+                                        $i++;
+                                        ?>
                                     <div class="faq-item card">
                                         <div class="faq-header" id="heading<?php echo $i; ?>">
                                             <button class="faq-button <?php if ($i != 1) {
-                                                                            echo 'collapsed';
-                                                                        } ?>" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="true" aria-controls="collapse<?php echo $i; ?>"><i class="fa fa-caret-right"></i><?php echo $row['faq_title']; ?></button>
+                                                                                    echo 'collapsed';
+                                                                                } ?>" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="true" aria-controls="collapse<?php echo $i; ?>"><i class="bi bi-caret-right"></i><?php echo $row['faq_title']; ?></button>
                                         </div>
 
                                         <div id="collapse<?php echo $i; ?>" class="collapse" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordion">
@@ -565,8 +569,8 @@
                                         </div>
                                     </div>
                                 <?php
-                                }
-                                ?>
+                                    }
+                                    ?>
                             </div>
                         </div>
                     </div>
@@ -594,8 +598,8 @@
                 <div class="col-md-12">
                     <div class="team-carousel owl-carousel">
                         <?php
-                        foreach ($team_members as $row) {
-                        ?>
+                            foreach ($team_members as $row) {
+                                ?>
                             <div class="team-item">
                                 <div class="team-photo">
                                     <img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="Team Photo">
@@ -607,32 +611,32 @@
                                 <div class="team-social">
                                     <ul>
                                         <?php if ($row['facebook'] != '') : ?>
-                                            <li><a href="<?php echo $row['facebook']; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="<?php echo $row['facebook']; ?>" target="_blank"><i class="bi bi-facebook"></i></a></li>
                                         <?php endif; ?>
                                         <?php if ($row['twitter'] != '') : ?>
-                                            <li><a href="<?php echo $row['twitter']; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="<?php echo $row['twitter']; ?>" target="_blank"><i class="bi bi-twitter"></i></a></li>
                                         <?php endif; ?>
                                         <?php if ($row['linkedin'] != '') : ?>
-                                            <li><a href="<?php echo $row['linkedin']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="<?php echo $row['linkedin']; ?>" target="_blank"><i class="bi bi-linkedin"></i></a></li>
                                         <?php endif; ?>
                                         <?php if ($row['youtube'] != '') : ?>
-                                            <li><a href="<?php echo $row['youtube']; ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                            <li><a href="<?php echo $row['youtube']; ?>" target="_blank"><i class="bi bi-youtube"></i></a></li>
                                         <?php endif; ?>
                                         <?php if ($row['google_plus'] != '') : ?>
-                                            <li><a href="<?php echo $row['google_plus']; ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="<?php echo $row['google_plus']; ?>" target="_blank"><i class="bi bi-google-plus"></i></a></li>
                                         <?php endif; ?>
                                         <?php if ($row['instagram'] != '') : ?>
-                                            <li><a href="<?php echo $row['instagram']; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="<?php echo $row['instagram']; ?>" target="_blank"><i class="bi bi-instagram"></i></a></li>
                                         <?php endif; ?>
                                         <?php if ($row['flickr'] != '') : ?>
-                                            <li><a href="<?php echo $row['flickr']; ?>" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                                            <li><a href="<?php echo $row['flickr']; ?>" target="_blank"><i class="bi bi-flickr"></i></a></li>
                                         <?php endif; ?>
                                     </ul>
                                 </div>
                             </div>
                         <?php
-                        }
-                        ?>
+                            }
+                            ?>
                     </div>
                 </div>
             </div>
@@ -657,8 +661,8 @@
             <div class="row">
 
                 <?php
-                foreach ($pricing_table as $row) {
-                ?>
+                    foreach ($pricing_table as $row) {
+                        ?>
                     <div class="offset-md-2 col-md-8 offset-md-2 offset-lg-0 col-lg-4">
                         <div class="price-item">
                             <div class="price-header">
@@ -672,14 +676,14 @@
                             </div>
                             <div class="price-footer">
                                 <div class="button-df">
-                                    <a href="<?php echo $row['button_url']; ?>"><?php echo $row['button_text']; ?> <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="<?php echo $row['button_url']; ?>"><?php echo $row['button_text']; ?> <i class="bi bi-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php
-                }
-                ?>
+                    }
+                    ?>
             </div>
         </div>
     </div>
@@ -705,8 +709,8 @@
                     <div class="testimonial-carousel owl-carousel mt-30">
 
                         <?php
-                        foreach ($testimonials as $row) {
-                        ?>
+                            foreach ($testimonials as $row) {
+                                ?>
                             <div class="testimonial-item">
                                 <div class="testimonial-photo">
                                     <img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="Cline Photo">
@@ -722,8 +726,8 @@
                                 </div>
                             </div>
                         <?php
-                        }
-                        ?>
+                            }
+                            ?>
                     </div>
                 </div>
             </div>
@@ -749,73 +753,73 @@
                 <div class="col-12">
                     <div class="blog-carousel owl-carousel">
                         <?php
-                        $i = 0;
-                        foreach ($all_news_category as $news) {
-                            $i++;
-                            if ($i > $page_home_lang_independent['home_blog_item']) {
-                                break;
-                            }
-                            $dt = explode('-', $news['news_date']);
-                            if ($dt[1] == '01') {
-                                $month = 'Jan';
-                            }
-                            if ($dt[1] == '02') {
-                                $month = 'Feb';
-                            }
-                            if ($dt[1] == '03') {
-                                $month = 'Mar';
-                            }
-                            if ($dt[1] == '04') {
-                                $month = 'Apr';
-                            }
-                            if ($dt[1] == '05') {
-                                $month = 'May';
-                            }
-                            if ($dt[1] == '06') {
-                                $month = 'Jun';
-                            }
-                            if ($dt[1] == '07') {
-                                $month = 'Jul';
-                            }
-                            if ($dt[1] == '08') {
-                                $month = 'Aug';
-                            }
-                            if ($dt[1] == '09') {
-                                $month = 'Sep';
-                            }
-                            if ($dt[1] == '10') {
-                                $month = 'Oct';
-                            }
-                            if ($dt[1] == '11') {
-                                $month = 'Nov';
-                            }
-                            if ($dt[1] == '12') {
-                                $month = 'Dec';
-                            }
-                            $year = $dt[0];
-                            $day = $dt[2];
-                        ?>
+                            $i = 0;
+                            foreach ($all_news_category as $news) {
+                                $i++;
+                                if ($i > $page_home_lang_independent['home_blog_item']) {
+                                    break;
+                                }
+                                $dt = explode('-', $news['news_date']);
+                                if ($dt[1] == '01') {
+                                    $month = 'Jan';
+                                }
+                                if ($dt[1] == '02') {
+                                    $month = 'Feb';
+                                }
+                                if ($dt[1] == '03') {
+                                    $month = 'Mar';
+                                }
+                                if ($dt[1] == '04') {
+                                    $month = 'Apr';
+                                }
+                                if ($dt[1] == '05') {
+                                    $month = 'May';
+                                }
+                                if ($dt[1] == '06') {
+                                    $month = 'Jun';
+                                }
+                                if ($dt[1] == '07') {
+                                    $month = 'Jul';
+                                }
+                                if ($dt[1] == '08') {
+                                    $month = 'Aug';
+                                }
+                                if ($dt[1] == '09') {
+                                    $month = 'Sep';
+                                }
+                                if ($dt[1] == '10') {
+                                    $month = 'Oct';
+                                }
+                                if ($dt[1] == '11') {
+                                    $month = 'Nov';
+                                }
+                                if ($dt[1] == '12') {
+                                    $month = 'Dec';
+                                }
+                                $year = $dt[0];
+                                $day = $dt[2];
+                                ?>
                             <div class="blog-item effect-item">
                                 <a href="<?php echo base_url(); ?>news/view/<?php echo $news['news_id']; ?>" class="image-effect">
                                     <div class="blog-image" style="background-image: url(<?php echo base_url(); ?>public/uploads/<?php echo $news['photo']; ?>)"></div>
                                 </a>
                                 <div class="blog-text">
                                     <h3><a href="<?php echo base_url(); ?>news/view/<?php echo $news['news_id']; ?>"><?php echo $news['news_title']; ?></a></h3>
-                                    <span><i class="fa fa-calendar-o"></i><?php echo $month . ' ' . $day . ', ' . $year; ?></span>
+                                    <span><i class="bi bi-calendar-o"></i><?php echo $month . ' ' . $day . ', ' . $year; ?></span>
                                     <p>
                                         <?php echo $news['news_content_short']; ?>
                                     </p>
                                 </div>
                                 <div class="blog-author">
                                     <ul>
-                                        <li><a href="<?php echo base_url(); ?>category/<?php echo $news['category_id']; ?>"><i class="fa fa-pencil-square-o"></i><?php echo $news['category_name']; ?></a></li>
-                                        <li class="blog-button"><a href="<?php echo base_url(); ?>news/view/<?php echo $news['news_id']; ?>"><i class="fa fa-long-arrow-right"></i></a></li>
+                                        <li><a href="<?php echo base_url(); ?>category/<?php echo $news['category_id']; ?>"><i class="bi bi-pencil-square-o"></i><?php echo $news['category_name']; ?></a></li>
+                                        <li class="blog-button"><a href="<?php echo base_url(); ?>news/view/<?php echo $news['news_id']; ?>"><i class="bi bi-long-arrow-right"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                         <?php
-                        }
-                        ?>
+                            }
+                            ?>
                     </div>
                 </div>
             </div>
@@ -832,7 +836,7 @@
                 <div class="brand-carousel owl-carousel">
                     <?php
                     foreach ($clients as $row) {
-                    ?>
+                        ?>
                         <?php if ($row['url'] != '') : ?>
                             <div class="brand-item"><a href="<?php echo $row['url']; ?>"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="<?php echo $row['name']; ?>"></a></div>
                         <?php else : ?>

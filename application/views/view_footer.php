@@ -1,5 +1,5 @@
     <?php
-    $CI =& get_instance();
+    $CI = &get_instance();
     $CI->load->model('Model_common');
     $footer_setting = $CI->Model_common->all_footer_setting();
     $footer_setting_lang_independent = $CI->Model_common->all_footer_setting_lang_independent();
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="button">
-                        <a href="<?php echo $footer_setting['cta_button_url']; ?>"><?php echo $footer_setting['cta_button_text']; ?> <i class="fa fa-chevron-circle-right"></i></a>
+                        <a href="<?php echo $footer_setting['cta_button_url']; ?>"><?php echo $footer_setting['cta_button_text']; ?> <i class="bi bi-chevron-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -34,12 +34,12 @@
                         <p>
                             <?php echo nl2br($footer_setting['newsletter_text']); ?>
                         </p>
-                        <?php echo form_open(base_url().'newsletter/send',array('class' => '')); ?>
-                        <div class="input-group">                            
+                        <?php echo form_open(base_url() . 'newsletter/send', array('class' => '')); ?>
+                        <div class="input-group">
                             <input type="email" class="form-control" placeholder="<?php echo EMAIL_ADDRESS; ?>" name="email_subscribe">
                             <span class="input-group-btn">
-                                <button class="btn" type="submit" name="form_subscribe"><i class="fa fa-location-arrow"></i></button>
-                            </span>                            
+                                <button class="btn" type="submit" name="form_subscribe"><i class="bi bi-location-arrow"></i></button>
+                            </span>
                         </div>
                         <?php echo form_close(); ?>
                     </div>
@@ -49,15 +49,15 @@
                         <h3><?php echo FOOTER_2_HEADING; ?></h3>
                         <ul>
                             <?php
-                            $i=0;
+                            $i = 0;
                             foreach ($all_news as $news) {
                                 $i++;
-                                if($i > $footer_setting_lang_independent['footer_recent_news_item']) {
+                                if ($i > $footer_setting_lang_independent['footer_recent_news_item']) {
                                     break;
                                 }
                                 ?>
-                                <li><a href="<?php echo base_url(); ?>news/view/<?php echo $news['news_id']; ?>"><?php echo $news['news_title']; ?></a></li>    
-                                <?php
+                                <li><a href="<?php echo base_url(); ?>news/view/<?php echo $news['news_id']; ?>"><?php echo $news['news_title']; ?></a></li>
+                            <?php
                             }
                             ?>
                         </ul>
@@ -66,21 +66,21 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-item">
                         <h3><?php echo FOOTER_3_HEADING; ?></h3>
-                        <div class="row pl-10 pr-10">                            
+                        <div class="row pl-10 pr-10">
                             <?php
-                            $i=0;
-                            foreach($portfolio_footer as $row) {
+                            $i = 0;
+                            foreach ($portfolio_footer as $row) {
                                 $i++;
-                                if($i > $footer_setting_lang_independent['footer_recent_portfolio_item']) {
+                                if ($i > $footer_setting_lang_independent['footer_recent_portfolio_item']) {
                                     break;
                                 }
                                 ?>
                                 <div class="col-4 footer-project">
                                     <a href="<?php echo base_url(); ?>portfolio/view/<?php echo $row['id']; ?>"><img src="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" alt="Project Photo"></a>
                                 </div>
-                                <?php
+                            <?php
                             }
-                            ?>                            
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                     <div class="footer-item">
                         <h3><?php echo FOOTER_4_HEADING; ?></h3>
                         <div class="footer-address-item">
-                            <div class="icon"><i class="fa fa-map-marker"></i></div>
+                            <div class="icon"><i class="bi bi-map-marker"></i></div>
                             <div class="text">
                                 <span>
                                     <?php echo nl2br($footer_setting['footer_address']); ?>
@@ -96,7 +96,7 @@
                             </div>
                         </div>
                         <div class="footer-address-item">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <div class="icon"><i class="bi bi-phone"></i></div>
                             <div class="text">
                                 <span>
                                     <?php echo nl2br($footer_setting['footer_phone']); ?>
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <div class="footer-address-item">
-                            <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                            <div class="icon"><i class="bi bi-envelope-o"></i></div>
                             <div class="text">
                                 <span>
                                     <?php echo nl2br($footer_setting['footer_email']); ?>
@@ -113,11 +113,9 @@
                         </div>
                         <ul class="footer-social">
                             <?php
-                            foreach ($social as $row)
-                            {
-                                if($row['social_url']!='')
-                                {
-                                    echo '<li><a href="'.$row['social_url'].'"><i class="'.$row['social_icon'].'"></i></a></li>';
+                            foreach ($social as $row) {
+                                if ($row['social_url'] != '') {
+                                    echo '<li><a href="' . $row['social_url'] . '"><i class="' . $row['social_icon'] . '"></i></a></li>';
                                 }
                             }
                             ?>
@@ -151,19 +149,19 @@
 
     <!--Scroll-Top-->
     <div class="scroll-top">
-        <i class="fa fa-angle-up"></i>
+        <i class="bi bi-angle-up"></i>
     </div>
     <!--Scroll-Top-->
 
-   
+
     <script src="<?php echo base_url(); ?>public/js/custom.js"></script>
-    
-    <?php if($_SESSION['sess_layout_direction'] == 'Left'): ?>
-    <script src="<?php echo base_url(); ?>public/js/ltr.js"></script>
+
+    <?php if ($_SESSION['sess_layout_direction'] == 'Left') : ?>
+        <script src="<?php echo base_url(); ?>public/js/ltr.js"></script>
     <?php endif; ?>
 
-    <?php if($_SESSION['sess_layout_direction'] == 'Right'): ?>
-    <script src="<?php echo base_url(); ?>public/js/rtl.js"></script>
+    <?php if ($_SESSION['sess_layout_direction'] == 'Right') : ?>
+        <script src="<?php echo base_url(); ?>public/js/rtl.js"></script>
     <?php endif; ?>
 
     <script>
@@ -186,26 +184,27 @@
         }
     </script>
     <?php
-        if($this->session->flashdata('success')):
-            echo '
+    if ($this->session->flashdata('success')) :
+        echo '
             <script>
-            toastr.success(\''.$this->session->flashdata('success').'\');
+            toastr.success(\'' . $this->session->flashdata('success') . '\');
             </script>
             ';
-        endif;
-        if($this->session->flashdata('error')):
-            echo '
+    endif;
+    if ($this->session->flashdata('error')) :
+        echo '
             <script>
-            toastr.error(\''.$this->session->flashdata('error').'\');
+            toastr.error(\'' . $this->session->flashdata('error') . '\');
             </script>
             ';
-        endif;
+    endif;
     ?>
 
     <?php
-    if($all_setting['tawk_live_chat_status'] == 'On'):
+    if ($all_setting['tawk_live_chat_status'] == 'On') :
         echo $all_setting['tawk_live_chat_code'];
     endif;
     ?>
-</body>
-</html>
+    </body>
+
+    </html>

@@ -205,7 +205,12 @@ $success_message = '';
     <script src="<?php echo base_url(); ?>public/js/viewportchecker.js"></script>
     <script src="<?php echo base_url(); ?>public/js/toastr.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
         .header-area,
         ul.nav-menu li ul li a,
         .searchbar .input-search,
@@ -405,6 +410,10 @@ $success_message = '';
         .lang-right select.form-control:not([size]):not([multiple]) {
             color: transparent !important;
         } */
+
+        * {
+            font-family: 'Nunito Sans', sans-serif !important;
+        }
     </style>
 
 </head>
@@ -448,11 +457,11 @@ $success_message = '';
                     <div class="header-info">
                         <ul class="first">
                             <li>
-                                <i class="fa fa-envelope"></i>
+                                <i class="bi bi-envelope"></i>
                                 <span><?php echo $setting['top_bar_email']; ?></span>
                             </li>
                             <li>
-                                <i class="fa fa-phone"></i>
+                                <i class="bi bi-phone"></i>
                                 <span><?php echo $setting['top_bar_phone']; ?></span>
                             </li>
                         </ul>
@@ -462,15 +471,15 @@ $success_message = '';
                                 <?php echo form_open(base_url() . 'lang/change'); ?>
                                 <select name="lang_change_id" class="form-control" onchange="this.form.submit()">
                                     <?php
-                                    $all_language = $CI->Model_lang->show_all_language();
-                                    foreach ($all_language as $row) {
-                                    ?>
+                                        $all_language = $CI->Model_lang->show_all_language();
+                                        foreach ($all_language as $row) {
+                                            ?>
                                         <option value="<?php echo $row['lang_id']; ?>" <?php if ($row['lang_id'] == $_SESSION['sess_lang_id']) {
-                                                                                            echo 'selected';
-                                                                                        } ?>><?php echo $row['lang_short_name']; ?></option>
+                                                                                                    echo 'selected';
+                                                                                                } ?>><?php echo $row['lang_short_name']; ?></option>
                                     <?php
-                                    }
-                                    ?>
+                                        }
+                                        ?>
                                 </select>
                                 <?php echo form_close(); ?>
                             </div>
@@ -549,12 +558,12 @@ $success_message = '';
 
                                         <?php if ($d_page == 1) : ?>
                                             <?php
-                                            foreach ($all_dynamic_pages as $rrr) {
-                                            ?>
+                                                    foreach ($all_dynamic_pages as $rrr) {
+                                                        ?>
                                                 <li><a href="<?php echo base_url(); ?>page/<?php echo $rrr['slug']; ?>"><?php echo $rrr['name']; ?></a></li>
                                             <?php
-                                            }
-                                            ?>
+                                                    }
+                                                    ?>
                                         <?php endif; ?>
                                     </ul>
                                 </li>
@@ -579,12 +588,12 @@ $success_message = '';
                         </ul>
                     </div>
                     <div class="searchbar">
-                        <div class="search-button"><i class="fa fa-search"></i></div>
+                        <div class="search-button"><i class="bi bi-search"></i></div>
                         <?php echo form_open(base_url() . 'search'); ?>
                         <div class="input-group input-search">
                             <input type="text" class="form-control" placeholder="<?php echo SEARCH_FOR; ?>" name="search_string">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit" name="form1"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-default" type="submit" name="form1"><i class="bi bi-search"></i></button>
                             </span>
                         </div>
                         <?php echo form_close(); ?>

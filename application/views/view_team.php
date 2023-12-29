@@ -28,32 +28,32 @@
                         </div>
                         <div class="team-social">
                             <ul>
-                                <?php if($row['facebook'] != ''): ?>
-                                    <li><a href="<?php echo $row['facebook']; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <?php if ($row['facebook'] != '') : ?>
+                                    <li><a href="<?php echo $row['facebook']; ?>" target="_blank"><i class="bi bi-facebook"></i></a></li>
                                 <?php endif; ?>
-                                <?php if($row['twitter'] != ''): ?>
-                                    <li><a href="<?php echo $row['twitter']; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <?php if ($row['twitter'] != '') : ?>
+                                    <li><a href="<?php echo $row['twitter']; ?>" target="_blank"><i class="bi bi-twitter"></i></a></li>
                                 <?php endif; ?>
-                                <?php if($row['linkedin'] != ''): ?>
-                                    <li><a href="<?php echo $row['linkedin']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <?php if ($row['linkedin'] != '') : ?>
+                                    <li><a href="<?php echo $row['linkedin']; ?>" target="_blank"><i class="bi bi-linkedin"></i></a></li>
                                 <?php endif; ?>
-                                <?php if($row['youtube'] != ''): ?>
-                                    <li><a href="<?php echo $row['youtube']; ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                <?php if ($row['youtube'] != '') : ?>
+                                    <li><a href="<?php echo $row['youtube']; ?>" target="_blank"><i class="bi bi-youtube"></i></a></li>
                                 <?php endif; ?>
-                                <?php if($row['google_plus'] != ''): ?>
-                                    <li><a href="<?php echo $row['google_plus']; ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                <?php if ($row['google_plus'] != '') : ?>
+                                    <li><a href="<?php echo $row['google_plus']; ?>" target="_blank"><i class="bi bi-google-plus"></i></a></li>
                                 <?php endif; ?>
-                                <?php if($row['instagram'] != ''): ?>
-                                    <li><a href="<?php echo $row['instagram']; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <?php if ($row['instagram'] != '') : ?>
+                                    <li><a href="<?php echo $row['instagram']; ?>" target="_blank"><i class="bi bi-instagram"></i></a></li>
                                 <?php endif; ?>
-                                <?php if($row['flickr'] != ''): ?>
-                                    <li><a href="<?php echo $row['flickr']; ?>" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                                <?php if ($row['flickr'] != '') : ?>
+                                    <li><a href="<?php echo $row['flickr']; ?>" target="_blank"><i class="bi bi-flickr"></i></a></li>
                                 <?php endif; ?>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
             ?>
         </div>

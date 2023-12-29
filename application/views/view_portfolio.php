@@ -21,7 +21,7 @@
                         foreach ($portfolio_category as $row) {
                             ?>
                             <li class="filtr" data-filter="<?php echo $row['category_id']; ?>"><?php echo $row['category_name']; ?></li>
-                            <?php
+                        <?php
                         }
                         ?>
                     </ul>
@@ -38,7 +38,7 @@
                             <div class="portfolio-bg"></div>
                             <div class="portfolio-table">
                                 <div class="portfolio-icon">
-                                    <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                    <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="magnific"><i class="bi bi-search-plus"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
             ?>
         </div>

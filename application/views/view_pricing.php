@@ -29,14 +29,14 @@
                         </div>
                         <div class="price-footer">
                             <div class="button-df">
-                                <a href="<?php echo $row['button_url']; ?>"><?php echo $row['button_text']; ?> <i class="fa fa-chevron-circle-right"></i></a>
+                                <a href="<?php echo $row['button_url']; ?>"><?php echo $row['button_text']; ?> <i class="bi bi-chevron-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
-            ?>            
+            ?>
         </div>
     </div>
 </div>

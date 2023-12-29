@@ -21,13 +21,13 @@
                     </a>
 
                     <?php
-                    if(!empty($portfolio_photo)) {
+                    if (!empty($portfolio_photo)) {
                         foreach ($portfolio_photo as $row) {
                             ?>
                             <a href="<?php echo base_url(); ?>public/uploads/portfolio_photos/<?php echo $row['photo']; ?>" class="magnific">
                                 <img src="<?php echo base_url(); ?>public/uploads/portfolio_photos/<?php echo $row['photo']; ?>" alt="Project Photo">
                             </a>
-                            <?php
+                    <?php
                         }
                     }
                     ?>
@@ -51,42 +51,42 @@
                     </div>
                     <div class="portfolio-form headstyle mt-30">
                         <h4><?php echo SIDEBAR_PORTFOLIO_HEADING_2; ?></h4>
-                        <?php echo form_open(base_url().'portfolio/send_email',array('class' => '')); ?>
-                            <div class="form-row">
-                                <input type="hidden" name="portfolio" value="<?php echo $portfolio['name']; ?>">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="<?php echo NAME; ?>" name="name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="<?php echo EMAIL_ADDRESS; ?>" name="email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="phone" class="form-control" placeholder="<?php echo PHONE_NUMBER; ?>" name="phone">
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="<?php echo MESSAGE; ?>" name="message"></textarea>
-                                </div>
-                                <?php if($check_captcha['captcha_portfolio_detail'] == 'Show'): ?>
+                        <?php echo form_open(base_url() . 'portfolio/send_email', array('class' => '')); ?>
+                        <div class="form-row">
+                            <input type="hidden" name="portfolio" value="<?php echo $portfolio['name']; ?>">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="<?php echo NAME; ?>" name="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="<?php echo EMAIL_ADDRESS; ?>" name="email">
+                            </div>
+                            <div class="form-group">
+                                <input type="phone" class="form-control" placeholder="<?php echo PHONE_NUMBER; ?>" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="<?php echo MESSAGE; ?>" name="message"></textarea>
+                            </div>
+                            <?php if ($check_captcha['captcha_portfolio_detail'] == 'Show') : ?>
                                 <div class="form-group col-12">
                                     <?php
-                                    $CI =& get_instance();
-                                    $CI->load->model('Model_portfolio');
-                                    $r_serial = mt_rand(1, $total_captcha);
-                                    $captcha_one = $CI->Model_portfolio->get_particular_captcha($r_serial);
-                                    ?>
+                                        $CI = &get_instance();
+                                        $CI->load->model('Model_portfolio');
+                                        $r_serial = mt_rand(1, $total_captcha);
+                                        $captcha_one = $CI->Model_portfolio->get_particular_captcha($r_serial);
+                                        ?>
                                     <div class="captcha-section-1">
-                                        <?php echo $captcha_one['captcha_value1'].' '.$captcha_one['captcha_symbol'].' '.$captcha_one['captcha_value2'].' = ' ?>
+                                        <?php echo $captcha_one['captcha_value1'] . ' ' . $captcha_one['captcha_symbol'] . ' ' . $captcha_one['captcha_value2'] . ' = ' ?>
                                     </div>
                                     <div class="captcha-section-2">
                                         <input type="hidden" name="r_serial" value="<?php echo $r_serial; ?>">
                                         <input type="text" class="form-control w-60" name="captcha_input">
                                     </div>
                                 </div>
-                                <?php endif; ?>
-                                <div class="form-button">
-                                    <button type="submit" class="btn" name="form_portfolio"><?php echo SUBMIT; ?></button>
-                                </div>
+                            <?php endif; ?>
+                            <div class="form-button">
+                                <button type="submit" class="btn" name="form_portfolio"><?php echo SUBMIT; ?></button>
                             </div>
+                        </div>
                         <?php echo form_close(); ?>
                     </div>
                 </div>
@@ -111,9 +111,9 @@
             <div class="col-12">
                 <div class="project-carousel owl-carousel">
                     <?php
-                    $i=0;
+                    $i = 0;
                     foreach ($portfolio_order_by_name as $row) {
-                        if($i>10) {
+                        if ($i > 10) {
                             break;
                         }
                         ?>
@@ -122,7 +122,7 @@
                                 <div class="portfolio-bg"></div>
                                 <div class="portfolio-table">
                                     <div class="portfolio-icon">
-                                        <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                        <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo']; ?>" class="magnific"><i class="bi bi-search-plus"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@
                                 <h3><a href="<?php echo base_url(); ?>portfolio/view/<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></h3>
                             </div>
                         </div>
-                        <?php
+                    <?php
                     }
                     ?>
                 </div>

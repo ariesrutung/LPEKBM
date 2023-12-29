@@ -23,7 +23,7 @@
             <div class="col-xl-4 col-md-6">
                 <div class="contact-item flex">
                     <div class="contact-icon">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <i class="bi bi-map-marker" aria-hidden="true"></i>
                     </div>
                     <div class="contact-text">
                         <h4><?php echo ADDRESS; ?></h4>
@@ -36,7 +36,7 @@
             <div class="col-xl-4 col-md-6">
                 <div class="contact-item flex">
                     <div class="contact-icon">
-                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        <i class="bi bi-mobile" aria-hidden="true"></i>
                     </div>
                     <div class="contact-text">
                         <h4><?php echo PHONE_NUMBER; ?></h4>
@@ -49,7 +49,7 @@
             <div class="col-xl-4 col-md-6">
                 <div class="contact-item flex">
                     <div class="contact-icon">
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <i class="bi bi-envelope-o" aria-hidden="true"></i>
                     </div>
                     <div class="contact-text">
                         <h4><?php echo EMAIL_ADDRESS; ?></h4>
@@ -85,11 +85,11 @@
                         <?php if ($check_captcha['captcha_contact'] == 'Show') : ?>
                             <div class="form-group col-12">
                                 <?php
-                                $CI = &get_instance();
-                                $CI->load->model('Model_contact');
-                                $r_serial = mt_rand(1, $total_captcha);
-                                $captcha_one = $CI->Model_contact->get_particular_captcha($r_serial);
-                                ?>
+                                    $CI = &get_instance();
+                                    $CI->load->model('Model_contact');
+                                    $r_serial = mt_rand(1, $total_captcha);
+                                    $captcha_one = $CI->Model_contact->get_particular_captcha($r_serial);
+                                    ?>
                                 <div class="captcha-section-1">
                                     <?php echo $captcha_one['captcha_value1'] . ' ' . $captcha_one['captcha_symbol'] . ' ' . $captcha_one['captcha_value2'] . ' = ' ?>
                                 </div>

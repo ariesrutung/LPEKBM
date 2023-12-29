@@ -22,13 +22,13 @@
                             <div class="gallery-bg"></div>
                             <div class="gallery-table">
                                 <div class="gallery-icon">
-                                    <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo_name']; ?>" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                    <a href="<?php echo base_url(); ?>public/uploads/<?php echo $row['photo_name']; ?>" class="magnific"><i class="bi bi-search-plus"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
             ?>
         </div>

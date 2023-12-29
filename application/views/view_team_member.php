@@ -20,14 +20,14 @@
                 <div class="team-info headstyle">
                     <h4><?php echo CONTACT; ?></h4>
                     <ul>
-                        <?php if($member['email'] != ''): ?>
-                            <li><span><i class="fa fa-envelope"></i></span><?php echo $member['email']; ?></li>
+                        <?php if ($member['email'] != '') : ?>
+                            <li><span><i class="bi bi-envelope"></i></span><?php echo $member['email']; ?></li>
                         <?php endif; ?>
-                        <?php if($member['phone'] != ''): ?>
-                            <li><span><i class="fa fa-phone"></i></span><?php echo $member['phone']; ?></li> 
+                        <?php if ($member['phone'] != '') : ?>
+                            <li><span><i class="bi bi-phone"></i></span><?php echo $member['phone']; ?></li>
                         <?php endif; ?>
-                        <?php if($member['website'] != ''): ?>
-                            <li><span><i class="fa fa-globe"></i></span><?php echo $member['website']; ?></li>
+                        <?php if ($member['website'] != '') : ?>
+                            <li><span><i class="bi bi-globe"></i></span><?php echo $member['website']; ?></li>
                         <?php endif; ?>
                     </ul>
                 </div>
@@ -40,26 +40,26 @@
                         <?php echo $member['detail']; ?>
                     </p>
                     <ul>
-                        <?php if($member['facebook'] != ''): ?>
-                            <li><a href="<?php echo $member['facebook']; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <?php if ($member['facebook'] != '') : ?>
+                            <li><a href="<?php echo $member['facebook']; ?>" target="_blank"><i class="bi bi-facebook"></i></a></li>
                         <?php endif; ?>
-                        <?php if($member['twitter'] != ''): ?>
-                            <li><a href="<?php echo $member['twitter']; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <?php if ($member['twitter'] != '') : ?>
+                            <li><a href="<?php echo $member['twitter']; ?>" target="_blank"><i class="bi bi-twitter"></i></a></li>
                         <?php endif; ?>
-                        <?php if($member['linkedin'] != ''): ?>
-                            <li><a href="<?php echo $member['linkedin']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <?php if ($member['linkedin'] != '') : ?>
+                            <li><a href="<?php echo $member['linkedin']; ?>" target="_blank"><i class="bi bi-linkedin"></i></a></li>
                         <?php endif; ?>
-                        <?php if($member['youtube'] != ''): ?>
-                            <li><a href="<?php echo $member['youtube']; ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        <?php if ($member['youtube'] != '') : ?>
+                            <li><a href="<?php echo $member['youtube']; ?>" target="_blank"><i class="bi bi-youtube"></i></a></li>
                         <?php endif; ?>
-                        <?php if($member['google_plus'] != ''): ?>
-                            <li><a href="<?php echo $member['google_plus']; ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        <?php if ($member['google_plus'] != '') : ?>
+                            <li><a href="<?php echo $member['google_plus']; ?>" target="_blank"><i class="bi bi-google-plus"></i></a></li>
                         <?php endif; ?>
-                        <?php if($member['instagram'] != ''): ?>
-                            <li><a href="<?php echo $member['instagram']; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <?php if ($member['instagram'] != '') : ?>
+                            <li><a href="<?php echo $member['instagram']; ?>" target="_blank"><i class="bi bi-instagram"></i></a></li>
                         <?php endif; ?>
-                        <?php if($member['flickr'] != ''): ?>
-                            <li><a href="<?php echo $member['flickr']; ?>" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                        <?php if ($member['flickr'] != '') : ?>
+                            <li><a href="<?php echo $member['flickr']; ?>" target="_blank"><i class="bi bi-flickr"></i></a></li>
                         <?php endif; ?>
                     </ul>
                 </div>

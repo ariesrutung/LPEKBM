@@ -254,7 +254,7 @@ $setting_data = $CI->Model_common->get_setting_data();
                                 <img src="<?php echo base_url('/public/uploads/logo_2.png') ?>" class="logo">
                             </div>
                             <div class="row px-3 justify-content-center mt-4 mb-5 border-line">
-                                <img src="https://png.pngtree.com/png-vector/20221025/ourmid/pngtree-log-in-people-sign-username-png-image_6377438.png" class="image">
+                                <img src="<?php echo base_url('/public/lang/login2.png') ?>" class="image">
                             </div>
                         </div>
                     </div>

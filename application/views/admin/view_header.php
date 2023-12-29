@@ -96,6 +96,10 @@
 			border-radius: 30px 0 0 30px;
 			/* padding: 12px !important; */
 		}
+
+		.user-image {
+			object-fit: cover;
+		}
 	</style>
 
 
@@ -176,7 +180,7 @@
 											echo 'active';
 										} ?>">
 						<a href="<?php echo base_url(); ?>admin/dashboard">
-							<i class="fa fa-laptop"></i> <span>Dasbor</span>
+							<i class="bi bi-laptop"></i> <span>Dasbor</span>
 						</a>
 					</li>
 
@@ -185,34 +189,34 @@
 											echo 'active';
 										} ?>">
 						<a href="#">
-							<i class="fa fa-cog"></i>
+							<i class="bi bi-cog"></i>
 							<span>Pengaturan</span>
 							<span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
+								<i class="bi bi-angle-left pull-right"></i>
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="<?php echo base_url(); ?>admin/setting"><i class="fa fa-globe"></i>Web</a></li>
+							<li><a href="<?php echo base_url(); ?>admin/setting"><i class="bi bi-globe"></i>Web</a></li>
 							<li class="treeview <?php if (($class_name == 'captcha') || ($class_name == 'captcha_setting') || ($class_name == 'captcha-setting')) {
 													echo 'active';
 												} ?>">
 								<a href="#">
-									<i class="fa fa-shield"></i>
+									<i class="bi bi-shield"></i>
 									<span>Captcha</span>
 									<span class="pull-right-container">
-										<i class="fa fa-angle-left pull-right"></i>
+										<i class="bi bi-angle-left pull-right"></i>
 									</span>
 								</a>
 								<ul class="treeview-menu">
-									<li><a href="<?php echo base_url(); ?>admin/captcha/setting"><i class="fa fa-circle-o"></i>Pengaturan</a></li>
-									<li><a href="<?php echo base_url(); ?>admin/captcha"><i class="fa fa-circle-o"></i>Riwayat Captcha</a></li>
+									<li><a href="<?php echo base_url(); ?>admin/captcha/setting"><i class="bi bi-circle-o"></i>Pengaturan</a></li>
+									<li><a href="<?php echo base_url(); ?>admin/captcha"><i class="bi bi-circle-o"></i>Riwayat Captcha</a></li>
 								</ul>
 							</li>
 
 					</li>
-					<li><a href="<?php echo base_url(); ?>admin/lang"><i class="fa fa-language"></i>Bahasa</a></li>
-					<li><a href="<?php echo base_url(); ?>admin/menu"><i class="fa fa-bars"></i>Menu</a></li>
-					<li><a href="<?php echo base_url(); ?>admin/social_media"><i class="fa fa-share-square-o"></i>Media Sosial</a></li>
+					<li><a href="<?php echo base_url(); ?>admin/lang"><i class="bi bi-language"></i>Bahasa</a></li>
+					<li><a href="<?php echo base_url(); ?>admin/menu"><i class="bi bi-bars"></i>Menu</a></li>
+					<li><a href="<?php echo base_url(); ?>admin/social_media"><i class="bi bi-share-square-o"></i>Media Sosial</a></li>
 				</ul>
 				</li>
 
@@ -220,29 +224,29 @@
 										echo 'active';
 									} ?>">
 					<a href="#">
-						<i class="fa fa-newspaper-o"></i>
+						<i class="bi bi-newspaper-o"></i>
 						<span>Halaman</span>
 						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
+							<i class="bi bi-angle-left pull-right"></i>
 						</span>
 					</a>
 					<ul class="treeview-menu">
-						<li><a href="<?php echo base_url(); ?>admin/page-home"><i class="fa fa-home"></i>Beranda</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-news"><i class="fa fa-file-text"></i>Berita</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-about"><i class="fa fa-info-circle"></i>Tentang LPEKBM</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-faq"><i class="fa fa-question-circle"></i>FAQ</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-service"><i class="fa fa-circle-o"></i>Layanan</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-testimonial"><i class="fa fa-circle-o"></i>Testimoni</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-event"><i class="fa fa-circle-o"></i>Kegiatan</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-contact"><i class="fa fa-phone"></i>Kontak</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-search"><i class="fa fa-search"></i>Pencarian</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-team"><i class="fa fa-users"></i>Tim</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-portfolio"><i class="fa fa-circle-o"></i>Portofolio</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-photo-gallery"><i class="fa fa-picture-o"></i>Galeri Foto</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-pricing"><i class="fa fa-money"></i>Tabel Harga</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-term"><i class="fa fa-check-square-o"></i>SK</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/page-privacy"><i class="fa fa-user-secret"></i>Kebijakan</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/footer-setting"><i class="fa fa-circle-o"></i>Footer</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-home"><i class="bi bi-home"></i>Beranda</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-news"><i class="bi bi-file-text"></i>Berita</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-about"><i class="bi bi-info-circle"></i>Tentang LPEKBM</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-faq"><i class="bi bi-question-circle"></i>FAQ</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-service"><i class="bi bi-circle-o"></i>Layanan</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-testimonial"><i class="bi bi-circle-o"></i>Testimoni</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-event"><i class="bi bi-circle-o"></i>Kegiatan</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-contact"><i class="bi bi-phone"></i>Kontak</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-search"><i class="bi bi-search"></i>Pencarian</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-team"><i class="bi bi-users"></i>Tim</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-portfolio"><i class="bi bi-circle-o"></i>Portofolio</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-photo-gallery"><i class="bi bi-picture-o"></i>Galeri Foto</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-pricing"><i class="bi bi-money"></i>Tabel Harga</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-term"><i class="bi bi-check-square-o"></i>SK</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/page-privacy"><i class="bi bi-user-secret"></i>Kebijakan</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/footer-setting"><i class="bi bi-circle-o"></i>Footer</a></li>
 					</ul>
 				</li>
 
@@ -250,80 +254,80 @@
 										echo 'active';
 									} ?>">
 					<a href="#">
-						<i class="fa fa-cog"></i>
+						<i class="bi bi-cog"></i>
 						<span>Konten Web</span>
 						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
+							<i class="bi bi-angle-left pull-right"></i>
 						</span>
 					</a>
 					<ul class="treeview-menu">
-						<li><a href="<?php echo base_url(); ?>admin/slider"><i class="fa fa-circle-o"></i>Slider</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/slider"><i class="bi bi-circle-o"></i>Slider</a></li>
 						<li class="treeview <?php if (($class_name == 'category') || ($class_name == 'news') || ($class_name == 'comment')) {
 												echo 'active';
 											} ?>">
 							<a href="#">
-								<i class="fa fa-newspaper-o"></i>
+								<i class="bi bi-newspaper-o"></i>
 								<span>Berita</span>
 								<span class="pull-right-container">
-									<i class="fa fa-angle-left pull-right"></i>
+									<i class="bi bi-angle-left pull-right"></i>
 								</span>
 							</a>
 							<ul class="treeview-menu">
-								<li><a href="<?php echo base_url(); ?>admin/news"><i class="fa fa-circle-o"></i>Berita</a></li>
-								<li><a href="<?php echo base_url(); ?>admin/category"><i class="fa fa-circle-o"></i>Kategori</a></li>
+								<li><a href="<?php echo base_url(); ?>admin/news"><i class="bi bi-circle-o"></i>Berita</a></li>
+								<li><a href="<?php echo base_url(); ?>admin/category"><i class="bi bi-circle-o"></i>Kategori</a></li>
 								<!-- <li><a href="<?php // echo base_url(); 
-													?>admin/comment"><i class="fa fa-circle-o"></i>Komentar</a></li> -->
+													?>admin/comment"><i class="bi bi-circle-o"></i>Komentar</a></li> -->
 							</ul>
 						</li>
 				</li>
-				<li><a href="<?php echo base_url(); ?>admin/event"><i class="fa fa-circle-o"></i>Kegiatan</a></li>
-				<li><a href="<?php echo base_url(); ?>admin/testimonial"><i class="fa fa-circle-o"></i>Testimoni</a></li>
+				<li><a href="<?php echo base_url(); ?>admin/event"><i class="bi bi-circle-o"></i>Kegiatan</a></li>
+				<li><a href="<?php echo base_url(); ?>admin/testimonial"><i class="bi bi-circle-o"></i>Testimoni</a></li>
 				<li class="treeview <?php if (($class_name == 'subscriber')) {
 										echo 'active';
 									} ?>">
 					<a href="#">
-						<i class="fa fa-comment"></i>
+						<i class="bi bi-comment"></i>
 						<span>Pelanggan</span>
 						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
+							<i class="bi bi-angle-left pull-right"></i>
 						</span>
 					</a>
 					<ul class="treeview-menu">
-						<li><a href="<?php echo base_url(); ?>admin/subscriber"><i class="fa fa-circle-o"></i>Pelanggan</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/subscriber/send_email"><i class="fa fa-circle-o"></i>Kirim Pesan</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/subscriber"><i class="bi bi-circle-o"></i>Pelanggan</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/subscriber/send_email"><i class="bi bi-circle-o"></i>Kirim Pesan</a></li>
 					</ul>
 				</li>
 
-				<li><a href="<?php echo base_url(); ?>admin/photo"><i class="fa fa-circle-o"></i>Galeri Foto</a></li>
+				<li><a href="<?php echo base_url(); ?>admin/photo"><i class="bi bi-circle-o"></i>Galeri Foto</a></li>
 				<li class="treeview <?php if (($class_name == 'portfolio') || ($class_name == 'portfolio_category')) {
 										echo 'active';
 									} ?>">
 					<a href="#">
-						<i class="fa fa-bars"></i>
+						<i class="bi bi-bars"></i>
 						<span>Portfolio</span>
 						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
+							<i class="bi bi-angle-left pull-right"></i>
 						</span>
 					</a>
 					<ul class="treeview-menu">
-						<li><a href="<?php echo base_url(); ?>admin/portfolio_category"><i class="fa fa-circle-o"></i> Kategori Portofolio</a></li>
-						<li><a href="<?php echo base_url(); ?>admin/portfolio"><i class="fa fa-circle-o"></i> Portofolio</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/portfolio_category"><i class="bi bi-circle-o"></i> Kategori Portofolio</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/portfolio"><i class="bi bi-circle-o"></i> Portofolio</a></li>
 					</ul>
 				</li>
-				<li><a href="<?php echo base_url(); ?>admin/pricing_table"><i class="fa fa-circle-o"></i>Tabel Harga</a></li>
-				<li><a href="<?php echo base_url(); ?>admin/feature"><i class="fa fa-circle-o"></i>Even Berjalan</a></li>
-				<li><a href="<?php echo base_url(); ?>admin/why_choose"><i class="fa fa-circle-o"></i>Mengapa Pilih Kami </a></li>
-				<li><a href="<?php echo base_url(); ?>admin/faq"><i class="fa fa-circle-o"></i>FAQ </a></li>
-				<li><a href="<?php echo base_url(); ?>admin/file"><i class="fa fa-circle-o"></i>Unggah File </a></li>
-				<li><a href="<?php echo base_url(); ?>admin/team_member"><i class="fa fa-circle-o"></i>Tim Kerja </a></li>
-				<li><a href="<?php echo base_url(); ?>admin/client"><i class="fa fa-circle-o"></i>Klien </a></li>
-				<li><a href="<?php echo base_url(); ?>admin/service"><i class="fa fa-circle-o"></i>Layanan </a></li>
-				<li><a href="<?php echo base_url(); ?>admin/service"><i class="fa fa-circle-o"></i>Fitur </a></li>
+				<li><a href="<?php echo base_url(); ?>admin/pricing_table"><i class="bi bi-circle-o"></i>Tabel Harga</a></li>
+				<li><a href="<?php echo base_url(); ?>admin/feature"><i class="bi bi-circle-o"></i>Even Berjalan</a></li>
+				<li><a href="<?php echo base_url(); ?>admin/why_choose"><i class="bi bi-circle-o"></i>Mengapa Pilih Kami </a></li>
+				<li><a href="<?php echo base_url(); ?>admin/faq"><i class="bi bi-circle-o"></i>FAQ </a></li>
+				<li><a href="<?php echo base_url(); ?>admin/file"><i class="bi bi-circle-o"></i>Unggah File </a></li>
+				<li><a href="<?php echo base_url(); ?>admin/team_member"><i class="bi bi-circle-o"></i>Tim Kerja </a></li>
+				<li><a href="<?php echo base_url(); ?>admin/client"><i class="bi bi-circle-o"></i>Klien </a></li>
+				<li><a href="<?php echo base_url(); ?>admin/service"><i class="bi bi-circle-o"></i>Layanan </a></li>
+				<li><a href="<?php echo base_url(); ?>admin/service"><i class="bi bi-circle-o"></i>Fitur </a></li>
 				<li class="treeview <?php if (($class_name == 'page_dynamic')) {
 										echo 'active';
 									} ?>">
 					<a href="<?php echo base_url(); ?>admin/page-dynamic">
-						<i class="fa fa-cog"></i> <span>Halaman Dinamis</span>
+						<i class="bi bi-cog"></i> <span>Halaman Dinamis</span>
 					</a>
 				</li>
 
